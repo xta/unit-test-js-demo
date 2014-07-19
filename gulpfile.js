@@ -4,7 +4,11 @@
 var gulp = require('gulp');
 
 // Include plugins
-var jasmine = require('gulp-jasmine');
+var jasmine     = require('gulp-jasmine');
+var uglify      = require('gulp-uglify');
+var source      = require('vinyl-source-stream'); // makes browserify bundle compatible with gulp
+var streamify   = require('gulp-streamify');
+var browserify  = require('browserify');
 
 // Test JS
 gulp.task('specs', function () {
@@ -12,9 +16,17 @@ gulp.task('specs', function () {
         .pipe(jasmine());
 });
 
+// Concatenate, Browserify & Minify JS
+gulp.task('scripts', function() {
+    return browserify('./assets/js/app.js').bundle()
+        .pipe(source('all.min.js'))
+        .pipe(streamify(uglify()))
+        .pipe(gulp.dest('./public/'));
+});
+
 // Default Task
 gulp.task('default', function() {
   // place code for your default task here
 });
 
-gulp.task('default', ['specs']);
+gulp.task('default', ['specs', 'scripts']);
