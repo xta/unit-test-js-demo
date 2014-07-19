@@ -6,6 +6,10 @@ a simple demo with Jasmine, Browserify, and Gulp on NodeJS
 
 I want to unit test my JS libraries AND use it in my browser.
 
+### Walkthrough Guide
+
+Read the [blog post](http://www.rexfeng.com/blog/2014/07/how-to-unit-test-your-js-and-use-it-in-the-browser/) that walks through this repo to add GulpJS, gulp-jasmine, and browserify.
+
 ### Dev
 
     // Run default task to run specs and generate minified JS
