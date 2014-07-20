@@ -4,7 +4,8 @@
 var gulp = require('gulp');
 
 // Include plugins
-var jasmine     = require('gulp-jasmine');
+var mocha       = require('gulp-mocha');
+var chai        = require("chai");
 var uglify      = require('gulp-uglify');
 var source      = require('vinyl-source-stream'); // makes browserify bundle compatible with gulp
 var streamify   = require('gulp-streamify');
@@ -13,7 +14,7 @@ var browserify  = require('browserify');
 // Test JS
 gulp.task('specs', function () {
     return gulp.src('assets/js/spec/lib/*.js')
-        .pipe(jasmine());
+        .pipe(mocha());
 });
 
 // Concatenate, Browserify & Minify JS

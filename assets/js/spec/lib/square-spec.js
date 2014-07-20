@@ -3,11 +3,12 @@
 
 "use strict";
 
-var square_lib = require('../../lib/square');
+var expect      = require('chai').expect;
+var square_lib  = require('../../lib/square');
 
 describe("#square", function () {
   it("returns the correct squared value", function () {
     var squared = square_lib.square(3);
-    expect(squared).toBe(9);
+    expect(squared).to.equal(9);
   });
 });

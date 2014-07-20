@@ -1,6 +1,6 @@
 # Unit Test JS demo
 
-a simple demo with Jasmine, Browserify, and Gulp on NodeJS
+a simple demo with Mocha+Chai, Browserify, and Gulp on NodeJS
 
 ### Why?
 
@@ -8,7 +8,7 @@ I want to unit test my JS libraries AND use it in my browser.
 
 ### Walkthrough Guide
 
-Read the [blog post](http://www.rexfeng.com/blog/2014/07/how-to-unit-test-your-js-and-use-it-in-the-browser/) that walks through this repo to add GulpJS, gulp-jasmine, and browserify.
+Read the [blog post](http://www.rexfeng.com/blog/2014/07/how-to-unit-test-your-js-and-use-it-in-the-browser/) that walks through this repo to add GulpJS, gulp-mocha, and browserify.
 
 ### Dev
 
@@ -23,7 +23,7 @@ Why did you include the `node_modules` dir?
 
 Why did you not include the [*insert task here*] Gulp task? Why did you organize your folders that way? Why didn't you include more test cases?
 
-* This demo is intended as an easy to understand example of using Gulp + Jasmine + Browserify together. This demo is not a production ready project.
+* This demo is intended as an easy to understand example of using Gulp + Mocha + Browserify together. This demo is not a production ready project.
 
 ### License
 
